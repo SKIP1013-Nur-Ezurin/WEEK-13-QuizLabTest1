@@ -1,0 +1,66 @@
+package Quiz;
+import java.util.Scanner;
+public class question1 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int items;
+		int quantity1, quantity2, quantity3;
+		double price1, price2, price3;
+		double totalPrice;
+		double discPrice;
+		double finalPrice;
+		double Price1,Price2,Price3;
+		int disc1 = 20 ;
+		int disc2 = 10 ;
+		
+		Scanner input = new Scanner(System.in);
+		
+		System.out.print("Enter the number of items: ");
+		items=input.nextInt();
+		
+		System.out.print("Enter price of first item : RM");
+		price1=input.nextDouble();
+		
+		System.out.print("Enter quantity of first items:  ");
+		quantity1=input.nextInt();
+		
+		System.out.println();
+		System.out.print("Enter price of second item : RM ");
+		price2=input.nextDouble();
+		System.out.print("Enter quantity of second items: ");
+		quantity2=input.nextInt();
+		
+		System.out.println();
+		System.out.print("Enter price of third item : RM ");
+		price3=input.nextDouble();
+		System.out.print("Enter quantity of third items: ");
+		quantity3=input.nextInt();
+		
+		Price1 = (quantity1 * price1);
+		Price2 = (quantity2 * price2);
+		Price3 =  (quantity3 * price3);
+		
+		totalPrice = Price1 + Price2 + Price3;
+		
+		System.out.printf("Total price : RM%.2f" ,totalPrice);
+		System.out.println("");
+		if (totalPrice > 100)
+		{
+			discPrice = (totalPrice * disc1) /100 ;
+		}
+		
+		else 
+		{
+			discPrice = (totalPrice * disc2) /100 ;
+		}
+		
+		System.out.printf("Discount received : RM%.2f  " , discPrice);
+		System.out.println("");
+		finalPrice = (totalPrice - discPrice);
+		System.out.printf ("Price to be paid: RM%.2f " ,finalPrice);
+		System.out.println("");
+
+	}
+
+}
